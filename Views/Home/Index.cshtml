@@ -1,0 +1,73 @@
+﻿@model QuizProject.Models.User 
+@{
+    ViewBag.Title = "index";
+}			
+@{
+    Layout = null;    
+}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Online Quiz System</title>
+	<link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="logo">
+                    <img src="~/images/logo.png" alt="LOGO" height="100" width="270">
+				</div>
+				
+			</div>
+			<div id="contents">
+				
+					<div>
+						<div id="contact" class="body">
+							
+                    <h1>User Login</h1>
+                            <br>
+							 @using (Html.BeginForm("LoginCheck", "Home", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+                               {<br>
+                                   <p><b>User Login</b></p>
+                                 <fieldset>
+                                     <legend></legend>
+								    <br><br>
+                                            <div class="editor-label">
+                                             @Html.LabelFor(model => model.UserName)
+                                            </div> 
+                                            <div class="editor-field">
+                                             @Html.TextBoxFor(model => model.UserName, new { type = "text", @placeholder = "username", @class = "form-control" , @required = "required"})
+                                            @Html.ValidationMessageFor(model => model.UserName) 
+                                            </div>
+                                            <br>
+                                             <div class="editor-label">
+                                             @Html.LabelFor(model => model.Password)
+                                            </div> 
+                                            <div class="editor-field">
+                                             @Html.TextBoxFor(model => model.Password, new { type = "password", @placeholder = "password ", @class = "form-control" , @required = "required" ,@pattern = ".{6,}"})
+                                            @Html.ValidationMessageFor(model => model.Password) 
+                                            </div>
+                                     <br>
+                                     <input type="submit" value="LOGIN" style="background-color:seagreen"/>
+                                     <br><br>
+                                      <a href="~/Home/forgot"><b>Forgot Password ?</b></a>
+                                     </fieldset> 
+                   }
+							
+							<h2>Online Quiz Gaming</h2>
+                            <br><br>
+                            <p>Login as <a href="~/Home/adminLogin"><b>ADMIN</b></a></p>
+							<p>
+								Login to play Games and to save your record. If you have no exixting account <a href="~/Home/signup"><b>SIGN UP</b></a> first. </p>
+							
+							
+						</div>
+					</div>
+				
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

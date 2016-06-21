@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "quizResult";
+}
+            
+				<div class="box">
+					<div>
+						<div class="body">
+                            
+                            @{
+                                Random rnd = new Random();
+                                int score = rnd.Next(20, 91);
+                            }
+                            <br>
+                           <p align="center"><font size="10" color="green">You have scored @score %</font></p>
+                            <br><br>
+                           <p align="center"><font size="4"> From the given chart you can find out that in which category do you fall</font></p>
+
+                            <table id="tab" align="center" style="font-size:larger; color:#0B5345">
+                            <tr>
+                                <th>Score</th>
+                                <th>.....</th>
+                                <th>Category</th>  
+                                          
+                            </tr>
+                                <br>
+                            <tr>
+                                <td>0-10 %</td>
+                                <td>.......</td>
+                                <td>Week</td>    
+                            </tr><tr>
+                                <td>10-25 %</td>
+                                <td>.......</td>
+                                <td>Fair</td>    
+                            </tr><tr>
+                                <td>25-40 %</td>
+                                <td>.......</td>
+                                <td>Good</td>    
+                            </tr><tr>
+                                <td>40-60 %</td>
+                                <td>.......</td>
+                                <td>Better</td>    
+                            </tr><tr>
+                                <td>60-80 %</td>
+                                <td>.......</td>
+                                <td>Best</td>    
+                            </tr><tr>
+                                <td>80-90 %</td>
+                                <td>.......</td>
+                                <td>Welldone</td>    
+                            </tr><tr>
+                                <td>90-100 %</td>
+                                <td>.......</td>
+                                <td>Excellent</td>    
+                            </tr>
+                       
+                        </table>
+
+
+
+    
+		 <br><br><br>
+						</div>
+					</div>
+				</div>
+			

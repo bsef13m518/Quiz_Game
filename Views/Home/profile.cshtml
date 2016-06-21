@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "profile";
+}
+<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+                            <h1>Profile</h1>
+							@{ var session = HttpContext.Current.Session; }
+                           
+                            <img src= "@session["ImagePath"]" height="200" width="200">
+                             <p><b>User Name: @session["User Name"]</b></p>
+                            <p><b>First Name: @session["First Name"]</b></p>
+                            <p><b>Last Name: @session["Last Name"]</b></p>
+                            <p><b>Email: @session["Email Address"]</b></p>
+                            <p><b>Password: @session["Password"]</b></p> 
+                            
+						</div>
+					</div>
+				</div>
+			</div>

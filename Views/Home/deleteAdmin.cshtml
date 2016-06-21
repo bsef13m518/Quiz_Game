@@ -1,0 +1,61 @@
+﻿@model QuizProject.Models.Admin
+@{
+    ViewBag.Title = "deleteAdmin";
+}
+
+@{
+    Layout = null;    
+}
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Online Quiz System</title>
+	<link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="logo">
+                    <img src="~/images/logo.png" alt="LOGO" height="100" width="270">
+				</div>
+				
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div  class="body">
+							<h1>Delete Admin</h1>
+                            <p>Delete some Admin</p>
+                        
+                        @using (Html.BeginForm("deleteAdmin", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            
+                         <fieldset>
+                             <legend></legend>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.AdminName)
+
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.AdminName, new { type = "text", @placeholder = "adminname" , @required = "required"})
+                                 @Html.ValidationMessageFor(model => model.AdminName)
+                             </div> 
+                             
+                             <br>
+                             <input type="submit" value="Delete Admin" style="background-color:seagreen"/>
+                            
+</fieldset> 
+                   }
+          
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+		</div>
+
+</body>
+</html>
+

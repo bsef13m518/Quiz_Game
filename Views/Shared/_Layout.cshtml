@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Online Quiz System</title>
+	<link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="logo">
+					<img src="~/images/logo.png" alt="LOGO" height="100" width="270">
+				</div>
+               
+				<div id="navigation">
+					<ul>
+
+						<li>    <!--<li class="selected">-->
+							<a href="~/Home/front">Home</a>
+						</li>
+						<li>
+							<a href="~/Home/about">About</a>
+						</li>
+						<li>
+							<a href="~/Home/iqgames">IQ Test</a>
+						</li>
+						<li>
+							<a href="~/Home/personality">Personality</a>
+						</li>
+						<li>
+							<a href="~/Home/psychology">Psychology</a>
+						</li>
+                        @{ var session = HttpContext.Current.Session; }
+						<li>
+							<a href="~/Home/profile">@session["User Name"]</a>
+						</li>
+                      
+                        <li>
+							<a href="~/Home/index">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+<body>
+    @RenderBody()
+    <div id="footer">
+			<div>
+				<ul class="navigation">
+					    <li>  <!--<li class="active">-->
+							<a href="~/Home/front">Home</a>
+						</li>
+						<li>
+							<a href="~/Home/about">About</a>
+						</li>
+						<li>
+							<a href="~/Home/iqgames">IQ Test</a>
+						</li>
+						<li>
+							<a href="~/Home/personality">Personality</a>
+						</li>
+						<li>
+							<a href="~/Home/psychology">Psychology</a>
+						</li>
+						<li>
+							<a href="~/Home/contact">Contact</a>
+						</li>
+				</ul>
+                
+				<div id="connect">
+					<a href="https://www.google.com" target="_blank" class="pinterest"></a> <a href="http://facebook.com/sumayyah.manzoor" target="_blank" class="facebook"></a> <a href="https://twitter.com/SumayyahManzoor" target="_blank" class="twitter"></a> <a href="https://www.gmail.com" target="_blank" class="googleplus"></a>
+				</div>
+			</div>
+			<p>
+				© 2023 by BHACCASYONIZTAS BEACH RESORT. All Rights Reserved
+			</p>
+		</div>
+	</div>
+</body>
+</html>

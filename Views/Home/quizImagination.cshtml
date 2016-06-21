@@ -1,0 +1,72 @@
+﻿@model List<QuizProject.Models.Imagination>
+@{
+    ViewBag.Title = "quizImagination";
+}
+ <div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+                            <h1>Quiz</h1>
+                        
+                         <form action="~/Home/quizResult"> 
+                        @{                     
+                                  
+                                   @Model[0].Id<b>. </b>@Model[0].Questions
+                                   <br><input type="radio" name="Q1" value="1" required>@Model[0].op1
+                                   <br><input type="radio" name="Q1" value="2" required>@Model[0].op2
+                                   <br><input type="radio" name="Q1" value="3" required>@Model[0].op3
+                                   <br><input type="radio" name="Q1" value="4" required>@Model[0].op4<br><br> 
+                                    @Model[1].Id<b>. </b>@Model[1].Questions
+                                   <br><input type="radio" name="Q2" value="1" required>@Model[1].op1
+                                   <br><input type="radio" name="Q2" value="2" required>@Model[1].op2
+                                   <br><input type="radio" name="Q2" value="3" required>@Model[1].op3
+                                   <br><input type="radio" name="Q2" value="4" required>@Model[1].op4<br><br> 
+                                    @Model[2].Id<b>. </b>@Model[2].Questions
+                                   <br><input type="radio" name="Q3" value="1" required>@Model[2].op1
+                                   <br><input type="radio" name="Q3" value="2" required>@Model[2].op2
+                                   <br><input type="radio" name="Q3" value="3" required>@Model[2].op3
+                                   <br><input type="radio" name="Q3" value="4" required>@Model[2].op4<br><br> 
+                                    @Model[3].Id<b>. </b>@Model[3].Questions
+                                   <br><input type="radio" name="Q4" value="1" required>@Model[3].op1
+                                   <br><input type="radio" name="Q4" value="2" required>@Model[3].op2
+                                   <br><input type="radio" name="Q4" value="3" required>@Model[3].op3
+                                   <br><input type="radio" name="Q4" value="4" required>@Model[3].op4<br><br> 
+                                    @Model[4].Id<b>. </b>@Model[4].Questions
+                                   <br><input type="radio" name="Q5" value="1" required>@Model[4].op1
+                                   <br><input type="radio" name="Q5" value="2" required>@Model[4].op2
+                                   <br><input type="radio" name="Q5" value="3" required>@Model[4].op3
+                                   <br><input type="radio" name="Q5" value="4" required>@Model[4].op4<br><br>
+                                   
+                                    @Model[5].Id<b>. </b>@Model[5].Questions
+                                   <br><input type="radio" name="Q6" value="1" required>@Model[5].op1
+                                   <br><input type="radio" name="Q6" value="2" required>@Model[5].op2
+                                   <br><input type="radio" name="Q6" value="3" required>@Model[5].op3
+                                   <br><input type="radio" name="Q6" value="4" required>@Model[5].op4<br><br>
+                                    @Model[6].Id<b>. </b>@Model[6].Questions
+                                   <br><input type="radio" name="Q7" value="1" required>@Model[6].op1
+                                   <br><input type="radio" name="Q7" value="2" required>@Model[6].op2
+                                   <br><input type="radio" name="Q7" value="3" required>@Model[6].op3
+                                   <br><input type="radio" name="Q7" value="4" required>@Model[6].op4<br><br>
+                                    @Model[7].Id<b>. </b>@Model[7].Questions
+                                   <br><input type="radio" name="Q8" value="1" required>@Model[7].op1
+                                   <br><input type="radio" name="Q8" value="2" required>@Model[7].op2
+                                   <br><input type="radio" name="Q8" value="3" required>@Model[7].op3
+                                   <br><input type="radio" name="Q8" value="4" required>@Model[7].op4<br><br>
+                                    @Model[8].Id<b>. </b>@Model[8].Questions
+                                   <br><input type="radio" name="Q9" value="1" required>@Model[8].op1
+                                   <br><input type="radio" name="Q9" value="2" required>@Model[8].op2
+                                   <br><input type="radio" name="Q9" value="3" required>@Model[8].op3
+                                   <br><input type="radio" name="Q9" value="4" required>@Model[8].op4<br><br>
+                                    @Model[9].Id<b>. </b>@Model[9].Questions
+                                   <br><input type="radio" name="Q10" value="1" required>@Model[9].op1
+                                   <br><input type="radio" name="Q10" value="2" required>@Model[9].op2
+                                   <br><input type="radio" name="Q10" value="3" required>@Model[9].op3
+                                   <br><input type="radio" name="Q10" value="4" required>@Model[9].op4<br><br>                         
+                        }
+                       <input type="submit" value="Submit" style="background-color:seagreen"/>
+                    </form>
+		
+						</div>
+					</div>
+				</div>
+			</div>

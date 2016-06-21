@@ -1,0 +1,117 @@
+﻿@model QuizProject.Models.User 
+@{
+    ViewBag.Title = "usernotavailable";
+}
+
+@{
+    Layout = null;    
+}
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Online Quiz System</title>
+	<link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="logo">
+                    <img src="~/images/logo.png" alt="LOGO" height="100" width="270">
+				</div>
+				
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div  class="body">
+							<h1>Sign Up</h1>
+                            <p>CREATE YOUR ACCOUNT</p>
+                        
+                        @using (Html.BeginForm("signup", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            
+                         <fieldset>
+                             <legend></legend>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.UserName)
+
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.UserName, new { type = "text", @placeholder = "username"})
+                                 @Html.ValidationMessageFor(model => model.UserName)
+                             </div> 
+                             <p style="color:red">user name not available</p>
+                             <br>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.FirstName)
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.FirstName, new { type = "text", @placeholder = "firstname"})
+                                 @Html.ValidationMessageFor(model => model.FirstName)
+                             </div>
+                             <br> 
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.LastName)
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.LastName, new { type = "text", @placeholder = "lastname"})
+                                @Html.ValidationMessageFor(model => model.LastName)
+                             </div> 
+                             <br>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.Email)
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.Email, new { type = "text", @placeholder = "email"})
+                                @Html.ValidationMessageFor(model => model.Email)
+                             </div> 
+                             <br>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.Password)
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.PasswordFor(model => model.Password, new { type = "password", @placeholder = "password" })
+                                 @Html.ValidationMessageFor(model => model.Password)
+                                  </div> 
+                             <br>
+                              <h5>Select Secret Question</h5>
+                            <select id="SecretQuestion" name="SecretQuestion">
+                                <option value="0">Hobby</option>
+                                <option value="1">Favourite Book</option>
+                                <option value="2">Favourite Color</option>
+                                <option value="3">Pet Name</option>
+                            </select>
+                             <br><br>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.Answer)
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.Answer,new { type = "text", @placeholder = "secret", @class = "form-control"})
+                                 @Html.ValidationMessageFor(model => model.Answer)
+                             </div>
+                             <br>
+                             <div class="editor-label">
+                                 @Html.LabelFor(model => model.ImagePath)     
+                             </div> 
+                             <div class="editor-field">
+                                 @Html.TextBoxFor(model => model.ImagePath,new { type = "file", @placeholder = "secret", @class = "form-control"})
+                                 @Html.ValidationMessageFor(model => model.ImagePath)
+                             </div>
+                             
+                             <br>
+                             <input type="submit" value="Register" style="background-color:seagreen"/>
+                            
+</fieldset> 
+                   }
+          
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+		</div>
+
+</body>
+</html>
